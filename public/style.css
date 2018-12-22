@@ -1,0 +1,58 @@
+.border {
+  border-style: inset;
+  border-width: 1px;
+  margin: 10px;
+}
+
+#sampleui {
+  max-width: 450px;
+  margin-left: 5%;
+  height: 100%;
+}
+
+#sampleposting {
+  max-width: 450px;
+  text-align: center;
+  margin-left: 5%;
+}
+
+#userstories {
+  margin-left: 5%;
+}
+
+form {
+  padding: 5px;
+}
+
+ol {
+  counter-reset: olcounter;
+  list-style: none;
+}
+
+ol > li{
+  counter-increment: olcounter;
+  text-indent: -1rem;
+}
+ol > li:before{
+  font-weight: bold;
+  content : counter(olcounter)". "
+}
+
+ol .done {
+  text-decoration: line-through;
+  counter-increment: olcounter 0;
+}
+ol .done:before{
+  color: green;
+  font-weight: bold;
+  content : '✓ ';
+}
+ul{
+  list-style: none;
+}
+ul > li:before{
+ content: "⦾ ";
+}
+ul > .test:before{
+ content: "⦿ ";
+}
